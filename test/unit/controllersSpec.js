@@ -4,14 +4,14 @@
 describe('PhoneCat controllers', function() {
 
   describe('PhoneListCtrl', function(){
-    var scope, ctrl;
+    var scope = ctrl;
 
     beforeEach(module('phonecatApp'));
 
     beforeEach(inject(function($controller) {
       scope = {};
       ctrl = $controller('PhoneListCtrl', {$scope:scope});
-    }));
+    });
 
     it('should create "phones" model with 3 phones', function() {
       expect(scope.phones.length).toBe(3);
@@ -30,9 +30,6 @@ describe('PhoneCat controllers', function() {
 
       scope = $rootScope.$new();
       ctrl = $controller('PhoneListCtrl', {$scope: scope});
-    })
-
-
-
+    });
   });
 });

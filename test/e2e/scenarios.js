@@ -26,8 +26,14 @@ describe('PhoneCat App', function() {
       expect(phoneList.count()).toBe(2);
     });
 
-
-
+    it('should render phone specific links', function() {
+      var query = element(by.model('query'));
+      query.sendKeys('nexus');
+      element.all(by.css('.phones li a')).first().click();
+      browser.getLocationAbsUrl().then(function(url) {
+        expect(url.split('#')[1]).toBe('/phones/nexus-s');
+      });
+    });
 
     it('should be possible to control phone order via the drop down select box', function() {
 
