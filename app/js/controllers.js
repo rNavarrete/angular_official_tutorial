@@ -12,7 +12,7 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
     $scope.age = 'age';
 }]);
 
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http'
+phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
  function($scope, $routeParams, $http) {
   $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
     $scope.phone = data;

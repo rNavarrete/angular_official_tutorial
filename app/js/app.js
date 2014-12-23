@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', ['ng-route','phonecatControllers']);
+var phonecatApp = angular.module('phonecatApp', ['ngRoute','phonecatControllers']);
 
 phonecatApp.config(['$routeProvider',
   function($routeProvider) {
