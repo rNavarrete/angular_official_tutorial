@@ -12,7 +12,7 @@ phonecatApp.config(['$routeProvider',
       controller: 'PhoneListCtrl'
     }).
     when('/phones/:phoneId',{
-      templateUrl: 'partials/phone-detail.html',
+      templateUrl: 'partials/phone-details.html',
       controller: 'PhoneDetailCtrl'
     }).
     otherwise({
